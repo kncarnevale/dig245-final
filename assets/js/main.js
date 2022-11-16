@@ -1,6 +1,6 @@
 
 /* javascript */
-var simba = "You are known as an adventurer. You have an introverted side, and may even have to step out of the spotlight to recharge every once in awhile. You want to go beyond the limits of your life and what is expected of you. You usually have a small friend group surrounding you and encouraging you. You are very loyal and will not hesitate to protect the people you love.";
+var simba = "You are known as an adventurer. You have an introverted side, and may even have to step out of the spotlight to recharge every once in awhile. You want to go beyond the limits of what is expected of you. You usually have a small friend group surrounding and encouraging you. You are very loyal and will not hesitate to protect the people you love.";
 var timon = "You are known as an entertainer: energetic and spontaneous. You can be a bit of a ham, but your enthusiasm is contagious to everyone around you. You love the spotlight, but you use it to encourage others as well";
 var scar = "You are known as an architect: ambitious, cunning, and always have a plan for everything. You prefer scheming and analytical thinking over social gossip. You are a bit mysterious as well, making it hard for even your closest friends and family to read you.";
 var sarabi = "You are known as a defender: reserved and protective. You are kind, always putting the needs of others before your own. You like to help as many people as you can.";
@@ -11,32 +11,16 @@ var rafiki = "You are introverted and mystical, and would prefer to be by yourse
 var mufasa = "You are known as a commander: driven, determined, and ruthless. You were born to lead with your confidence and charisma. You find happiness in your achievements, for Mufasa this was in his legacy.";
 
 var imgArray = [];
-imgArray[0] = new Image();
-// imgArray[0].src = '../assets/img/simba.webp';
+imgArray.push('assets/img/simba.webp');
+imgArray.push('assets/img/timon.webp');
+imgArray.push('assets/img/scar.webp');
+imgArray.push('assets/img/sarabi.png');
+imgArray.push('assets/img/nala.webp');
+imgArray.push('assets/img/pumbaa.webp');
+imgArray.push('assets/img/zazu.webp');
+imgArray.push('assets/img/rafiki.webp');
+imgArray.push('assets/img/mufasa.webp');
 
-// imgArray[1] = new Image();
-// imgArray[1].src = '../assets/img/timon.webp';
-//
-// imgArray[2] = new Image();
-// imgArray[2].src = '../assets/img/scar.webp';
-//
-// imgArray[3] = new Image();
-// imgArray[3].src = '../assets/img/sarabi.png';
-//
-// imgArray[4] = new Image();
-// imgArray[4].src = '../assets/img/nala.webp';
-//
-// imgArray[5] = new Image();
-// imgArray[5].src = '../assets/img/pumbaa.webp';
-//
-// imgArray[6] = new Image();
-// imgArray[6].src = '../assets/img/zazu.webp';
-//
-// imgArray[7] = new Image();
-// imgArray[7].src = '../assets/img/rafiki.webp';
-//
-// imgArray[8] = new Image();
-// imgArray[8].src = '../assets/img/mufasa.webp';
 
 var characters = ["Simba", "Timon","Scar","Sarabi","Nala","Pumbaa","Zazu","Rafiki","Mufasa"];
 var descriptions = [simba, timon, scar,sarabi,nala,pumbaa,zazu,rafiki,mufasa];
@@ -54,9 +38,10 @@ var currentDescription = descriptions[index];
 
 function getResults(){
   index = getRandomInt(0,9);
-  // currentImage = imageArray[index];
+  currentImage = imgArray[index];
   currentCharacter = characters[index];
   currentDescription = descriptions[index];
+  $("#imgID").attr('src', currentImage);
   document.getElementById("charID").innerHTML= currentCharacter;
   document.getElementById("descriptID").innerHTML= currentDescription;
 };
