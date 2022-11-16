@@ -64,6 +64,9 @@ function getResults(){
 //fix passing value
 function yesOrNo(){
   var value = $("input[type=radio][name=accuracy]:checked").val();
+  if(value != null){
+    document.getElementById("resultsButton").onclick = location.href='conclusion.html';
+  }
   localStorage.setItem('greeting', value);
 };
 
@@ -74,20 +77,11 @@ function test(){
 }
 
 //validate buttons before pressing submit
-function checkRadioButtons() {
+var q1 = $('input[name=answer1]');
+var q2 = $('input[name=answer2]');
+function checkRadioButtonsForQuiz() {
+  if ($(q1).is(':checked') && $(q2).is(':checked')) {
+    document.getElementById("quizButton").onclick = location.href='results.html';
+  }
 
-     var q1 = $('input[name=answer1]');
-     var q2 = $('input[name=answer2]');
-
-     validate();
-
-     $("input[type='radio']").change(validate);
-
-     function validate() {
-         if ($(q1).is(':checked') && $(q2).is(':checked')) {
-             $(".btn#submit1").removeAttr("disabled", false);
-         } else {
-             $(".btn#submit1").attr("disabled", true);
-         }
-     }
 };
