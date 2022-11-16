@@ -61,26 +61,35 @@ function getResults(){
   document.getElementById("descriptID").innerHTML= currentDescription;
 };
 
-//fix passing value
+//HOW TO PASS THIS YES OR NO?
 function yesOrNo(){
   var value = $("input[type=radio][name=accuracy]:checked").val();
   if(value != null){
     document.getElementById("resultsButton").onclick = location.href='conclusion.html';
+    document.cookie = "value=" + value + ";path=/";
   }
-  localStorage.setItem('greeting', value);
+  //localStorage.setItem('greeting', value);
 };
 
 function test(){
-  const greetingValue = localStorage.getItem('greeting');
+  //const greetingValue = localStorage.getItem('greeting');
 
-  document.getElementById("demo").innerHTML+= greetingValue;
+  document.getElementById("demo").innerHTML+= value;
 }
 
 //validate buttons before pressing submit
 var q1 = $('input[name=answer1]');
 var q2 = $('input[name=answer2]');
+var q3 = $('input[name=answer3]');
+var q4 = $('input[name=answer4]');
+var q5 = $('input[name=answer5]');
+var q6 = $('input[name=answer6]');
+var q7 = $('input[name=answer7]');
+var q8 = $('input[name=answer8]');
+var q9 = $('input[name=answer9]');
+var q10 = $('input[name=answer10]');
 function checkRadioButtonsForQuiz() {
-  if ($(q1).is(':checked') && $(q2).is(':checked')) {
+  if ($(q1).is(':checked') && $(q2).is(':checked') && $(q3).is(':checked')&& $(q4).is(':checked')&& $(q5).is(':checked')&& $(q6).is(':checked')&& $(q7).is(':checked')&& $(q8).is(':checked')&& $(q9).is(':checked')&& $(q10).is(':checked')) {
     document.getElementById("quizButton").onclick = location.href='results.html';
   }
 
