@@ -37,8 +37,8 @@ var currentCharacter = characters[index];
 var currentDescription = descriptions[index];
 var conclusionTextYes = "Clicked Yes";
 var conclusionTextNo = "Clicked No";
-var countYes = localStorage.setItem('countYes', "0");
-var countNo = localStorage.setItem('countNo', "0");
+document.cookie = "yes=0;expires=Thu, 29 Dec 2022 12:00:00 UTC";
+document.cookie = "no=0;expires=Thu, 29 Dec 2022 12:00:00 UTC";
 
 function makePieChart(countYes,countNo){
   var pie = new ej.charts.AccumulationChart({
@@ -74,13 +74,21 @@ function getResults(){
   document.getElementById("descriptID").innerHTML= currentDescription;
 };
 
+function getCookie(cookieName) {
+  let cookie = {};
+  document.cookie.split(';').forEach(function(el) {
+    let [key,value] = el.split('=');
+    cookie[key.trim()] = value;
+  })
+  return cookie[cookieName];
+}
 
 function makeConclusionsPage(){
-  var valueYes = "";
-  var valueNo = "";
-  var stringToIntYes = 0;
-  var stringToIntNo = 0;
   var value = $("input[type=radio][name=accuracy]:checked").val();
+  var cookie = document.cookie.split(" ");
+  var yesCookie =getCookie("yes");
+  var noCookie =getCookie("no");
+
 
   document.getElementById("header").innerHTML= "Conclusion Page";
   document.getElementById("charID").remove();
@@ -90,30 +98,15 @@ function makeConclusionsPage(){
 
   if(value == "yes"){
     document.body.innerHTML = document.body.innerHTML.replace(currentDescription, conclusionTextYes);
-    valueYes = localStorage.getItem('countYes');
-    stringToIntYes = parseInt(valueYes);
-    stringToIntYes++;
+    yesCookie++;
+    makePieChart(yesCookie,noCookie);
+    document.cookie = 'yes='+yesCookie;
 
-    valueNo = localStorage.getItem('countNo');
-    stringToIntNo = parseInt(valueNo);
-
-    makePieChart(stringToIntYes,stringToIntNo);
-    localStorage.clear();
-    localStorage.setItem('countYes', "stringToIntYes");
-    localStorage.setItem('countNo', "stringToIntNo");
   }else{
     document.body.innerHTML = document.body.innerHTML.replace(currentDescription, conclusionTextNo);
-    valueNo = localStorage.getItem('countNo');
-    stringToIntNo = parseInt(valueNo);
-    stringToIntNo++;
-
-    valueYes = localStorage.getItem('countYes');
-    stringToIntYes = parseInt(valueYes);
-
-    makePieChart(stringToIntYes,stringToIntNo);
-    localStorage.clear();
-    localStorage.setItem('countYes', "stringToIntYes");
-    localStorage.setItem('countNo', "stringToIntNo");
+    noCookie++;
+    makePieChart(yesCookie,noCookie);
+    document.cookie = 'no='+noCookie;
   }
 
 
