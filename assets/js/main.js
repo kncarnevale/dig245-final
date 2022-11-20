@@ -85,7 +85,6 @@ function getCookie(cookieName) {
 
 function makeConclusionsPage(){
   var value = $("input[type=radio][name=accuracy]:checked").val();
-  var cookie = document.cookie.split(" ");
   var yesCookie =getCookie("yes");
   var noCookie =getCookie("no");
 
