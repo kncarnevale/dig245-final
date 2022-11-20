@@ -35,6 +35,34 @@ var index = 0;
 var currentImage = imgArray[index];
 var currentCharacter = characters[index];
 var currentDescription = descriptions[index];
+var conclusionTextYes = "Clicked Yes";
+var conclusionTextNo = "Clicked No";
+var countYes = localStorage.setItem('countYes', "0");
+var countNo = localStorage.setItem('countNo', "0");
+
+function makePieChart(countYes,countNo){
+  var pie = new ej.charts.AccumulationChart({
+            //Initializing Series
+            series: [
+                {
+                    dataSource: [
+                        { 'x': 'Yes', y: countYes },
+                        { 'x': 'No', y: countNo }
+                    ],
+                    dataLabel: {
+                        visible: true,
+                        position: 'Inside',
+                    },
+                    xName: 'x',
+                    yName: 'y'
+                }
+            ],
+        });
+        pie.appendTo('#container');
+}
+
+
+
 
 function getResults(){
   index = getRandomInt(0,9);
@@ -46,21 +74,51 @@ function getResults(){
   document.getElementById("descriptID").innerHTML= currentDescription;
 };
 
-//HOW TO PASS THIS YES OR NO?
-function yesOrNo(){
+
+function makeConclusionsPage(){
+  var valueYes = "";
+  var valueNo = "";
+  var stringToIntYes = 0;
+  var stringToIntNo = 0;
   var value = $("input[type=radio][name=accuracy]:checked").val();
-  if(value != null){
-    document.getElementById("resultsButton").onclick = location.href='conclusion.html';
-    document.cookie = "value=" + value + ";path=/";
+
+  document.getElementById("header").innerHTML= "Conclusion Page";
+  document.getElementById("charID").remove();
+  document.getElementById("link").remove();
+  document.getElementById("accuracyQ").remove();
+  document.getElementById("imgID").remove();
+
+  if(value == "yes"){
+    document.body.innerHTML = document.body.innerHTML.replace(currentDescription, conclusionTextYes);
+    valueYes = localStorage.getItem('countYes');
+    stringToIntYes = parseInt(valueYes);
+    stringToIntYes++;
+
+    valueNo = localStorage.getItem('countNo');
+    stringToIntNo = parseInt(valueNo);
+
+    makePieChart(stringToIntYes,stringToIntNo);
+    localStorage.clear();
+    localStorage.setItem('countYes', "stringToIntYes");
+    localStorage.setItem('countNo', "stringToIntNo");
+  }else{
+    document.body.innerHTML = document.body.innerHTML.replace(currentDescription, conclusionTextNo);
+    valueNo = localStorage.getItem('countNo');
+    stringToIntNo = parseInt(valueNo);
+    stringToIntNo++;
+
+    valueYes = localStorage.getItem('countYes');
+    stringToIntYes = parseInt(valueYes);
+
+    makePieChart(stringToIntYes,stringToIntNo);
+    localStorage.clear();
+    localStorage.setItem('countYes', "stringToIntYes");
+    localStorage.setItem('countNo', "stringToIntNo");
   }
-  //localStorage.setItem('greeting', value);
+
+
 };
 
-function test(){
-  //const greetingValue = localStorage.getItem('greeting');
-
-  document.getElementById("demo").innerHTML+= value;
-}
 
 //validate buttons before pressing submit
 var q1 = $('input[name=answer1]');

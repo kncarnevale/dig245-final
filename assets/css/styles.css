@@ -1,9 +1,2 @@
 
 /* css */
-#my-pie-chart {
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    background: conic-gradient(blue 50%, red 50%);
-
-}
