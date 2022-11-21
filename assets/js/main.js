@@ -35,31 +35,31 @@ var index = 0;
 var currentImage = imgArray[index];
 var currentCharacter = characters[index];
 var currentDescription = descriptions[index];
-var conclusionTextYes = "Clicked Yes";
-var conclusionTextNo = "Clicked No";
-document.cookie = "yes=0;expires=Thu, 29 Dec 2022 12:00:00 UTC";
-document.cookie = "no=0;expires=Thu, 29 Dec 2022 12:00:00 UTC";
+var conclusionTextYes = "Clicked Yes: Insert paragraph";
+var conclusionTextNo = "Clicked No: Insert paragraph";
+// document.cookie = "yes=0;expires=Thu, 29 Dec 2022 12:00:00 UTC";
+// document.cookie = "no=0;expires=Thu, 29 Dec 2022 12:00:00 UTC";
 
-function makePieChart(countYes,countNo){
-  var pie = new ej.charts.AccumulationChart({
-            //Initializing Series
-            series: [
-                {
-                    dataSource: [
-                        { 'x': 'Yes', y: countYes },
-                        { 'x': 'No', y: countNo }
-                    ],
-                    dataLabel: {
-                        visible: true,
-                        position: 'Inside',
-                    },
-                    xName: 'x',
-                    yName: 'y'
-                }
-            ],
-        });
-        pie.appendTo('#container');
-}
+// function makePieChart(countYes,countNo){
+//   var pie = new ej.charts.AccumulationChart({
+//             //Initializing Series
+//             series: [
+//                 {
+//                     dataSource: [
+//                         { 'x': 'Yes', y: countYes },
+//                         { 'x': 'No', y: countNo }
+//                     ],
+//                     dataLabel: {
+//                         visible: true,
+//                         position: 'Inside',
+//                     },
+//                     xName: 'x',
+//                     yName: 'y'
+//                 }
+//             ],
+//         });
+//         pie.appendTo('#container');
+// }
 
 
 
@@ -74,19 +74,19 @@ function getResults(){
   document.getElementById("descriptID").innerHTML= currentDescription;
 };
 
-function getCookie(cookieName) {
-  let cookie = {};
-  document.cookie.split(';').forEach(function(el) {
-    let [key,value] = el.split('=');
-    cookie[key.trim()] = value;
-  })
-  return cookie[cookieName];
-}
+// function getCookie(cookieName) {
+//   let cookie = {};
+//   document.cookie.split(';').forEach(function(el) {
+//     let [key,value] = el.split('=');
+//     cookie[key.trim()] = value;
+//   })
+//   return cookie[cookieName];
+// }
 
 function makeConclusionsPage(){
   var value = $("input[type=radio][name=accuracy]:checked").val();
-  var yesCookie =getCookie("yes");
-  var noCookie =getCookie("no");
+  // var yesCookie =getCookie("yes");
+  // var noCookie =getCookie("no");
 
 
   document.getElementById("header").innerHTML= "Conclusion Page";
@@ -97,15 +97,15 @@ function makeConclusionsPage(){
 
   if(value == "yes"){
     document.body.innerHTML = document.body.innerHTML.replace(currentDescription, conclusionTextYes);
-    yesCookie++;
-    makePieChart(yesCookie,noCookie);
-    document.cookie = 'yes='+yesCookie;
+    // yesCookie++;
+    // makePieChart(yesCookie,noCookie);
+    // document.cookie = 'yes='+yesCookie;
 
   }else{
     document.body.innerHTML = document.body.innerHTML.replace(currentDescription, conclusionTextNo);
-    noCookie++;
-    makePieChart(yesCookie,noCookie);
-    document.cookie = 'no='+noCookie;
+    // noCookie++;
+    // makePieChart(yesCookie,noCookie);
+    // document.cookie = 'no='+noCookie;
   }
 
 
