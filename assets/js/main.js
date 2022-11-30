@@ -14,7 +14,7 @@ var imgArray = [];
 imgArray.push('assets/img/simba.webp');
 imgArray.push('assets/img/timon.webp');
 imgArray.push('assets/img/scar.webp');
-imgArray.push('assets/img/sarabi.png');
+imgArray.push('assets/img/sarabi.webp');
 imgArray.push('assets/img/nala.webp');
 imgArray.push('assets/img/pumbaa.webp');
 imgArray.push('assets/img/zazu.webp');
@@ -32,6 +32,7 @@ function getRandomInt(min, max) {
 }
 
 var index = 0;
+// var currentImage = imgArray[index];
 var currentImage = imgArray[index];
 var currentCharacter = characters[index];
 var currentDescription = descriptions[index];
@@ -82,7 +83,16 @@ function getResults(){
 //   })
 //   return cookie[cookieName];
 // }
-
+$(document).ready(function(){
+  $("#flipY").click(function(){
+    $("#panelY").slideDown("slow");
+  });
+});
+$(document).ready(function(){
+  $("#flipN").click(function(){
+    $("#panelN").slideDown("slow");
+  });
+});
 function makeConclusionsPage(){
   var value = $("input[type=radio][name=accuracy]:checked").val();
   // var yesCookie =getCookie("yes");
