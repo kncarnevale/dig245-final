@@ -7,6 +7,13 @@
     padding-top: 20px;
     padding-bottom: 20px
 }
+input[type="radio"]{
+  margin: 0 10px 0 10px;
+}
+#orangeButton {
+    accent-color: #C4733B;
+}
+
 #panelY, #flipY {
   padding: 5px;
   text-align: center;
