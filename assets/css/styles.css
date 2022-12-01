@@ -12,7 +12,7 @@ input[type="radio"]{
 }
 .radio-button {
     accent-color: #C4733B;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 .radio-button input[type="radio"]:checked+label {
        color: #C4733B;
