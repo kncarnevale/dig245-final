@@ -28,23 +28,27 @@ input[type="radio"]{
 #panelY {
   padding: 50px;
   display: none;
+  font-size: 3vw;
 }
 #panelN, #flipN {
   padding: 5px;
   text-align: center;
   background-color: #C4733B;
   border: solid 1px black;
+
 }
 
 #panelN {
   padding: 50px;
   display: none;
+  font-size: 3vw;
 }
 #panelA {
   padding: 5px;
   text-align: center;
   background-color: #C4733B;
   border: solid 1px black;
+  font-size: 3vw;
 }
 
 
@@ -55,6 +59,8 @@ input[type="radio"]{
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  font-size: 3vw;
+
 }
 
 #flipY:hover {
@@ -64,6 +70,8 @@ input[type="radio"]{
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  font-size: 3vw;
+
 }
 .white{ color: white}
 .title_homepage{
