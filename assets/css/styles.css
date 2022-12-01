@@ -10,9 +10,13 @@
 input[type="radio"]{
   margin: 0 10px 0 10px;
 }
-#orangeButton {
+.radio-button {
     accent-color: #C4733B;
 }
+.radio-button input[type="radio"]:checked+label {
+       color: #C4733B;
+       accent-color: #C4733B;
+     }
 
 #panelY, #flipY {
   padding: 5px;

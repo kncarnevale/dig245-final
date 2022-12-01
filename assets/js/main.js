@@ -50,26 +50,34 @@ function getResults(){
 
 $(document).ready(function(){
   $("#flipY").click(function(){
-    if($("#panelY").is(':visible')){
+    if($("#panelN").is(':visible')){
       document.getElementById('flipY').style.color = 'black';
-      $("#panelY").slideToggle("slow");
-    }else{
+    }
+    else{
       document.getElementById('flipY').style.color = 'white';
-      $("#panelY").slideToggle("slow");
+      $("#panelY").slideDown("slow");
     }
   });
 });
 $(document).ready(function(){
   $("#flipN").click(function(){
-    if($("#panelN").is(':visible')){
+    if($("#panelY").is(':visible')){
       document.getElementById('flipN').style.color = 'black';
-      $("#panelN").slideToggle("slow");
-    }else{
+    }
+    else{
       document.getElementById('flipN').style.color = 'white';
-      $("#panelN").slideToggle("slow");
+      $("#panelN").slideDown("slow");
     }
   });
 });
+
+$(document).ready(function(){
+$("#orangeButton").click(function(){
+  document.getElementById('orangeButton').style.color = 'red';
+
+});
+});
+
 
 function makeConclusionsPage(){
   var value = $("input[type=radio][name=accuracy]:checked").val();
