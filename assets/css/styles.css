@@ -28,7 +28,7 @@ input[type="radio"]{
 #panelY {
   padding: 50px;
   display: none;
-  font-size: 3vw;
+
 }
 #panelN, #flipN {
   padding: 5px;
@@ -41,14 +41,13 @@ input[type="radio"]{
 #panelN {
   padding: 50px;
   display: none;
-  font-size: 3vw;
 }
 #panelA {
   padding: 5px;
   text-align: center;
   background-color: #C4733B;
   border: solid 1px black;
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 
 
@@ -59,7 +58,8 @@ input[type="radio"]{
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  font-size: 3vw;
+  font-size: 2.5vw;
+
 
 }
 
@@ -70,7 +70,7 @@ input[type="radio"]{
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  font-size: 3vw;
+  font-size: 2.5vw;
 
 }
 .white{ color: white}
@@ -84,10 +84,10 @@ input[type="radio"]{
 }
 .title_otherpage{
   color: #C4733B;
-  font-size: 10vw;
+  font-size: 8vw;
   text-align: center;
   font-weight: bold;
-  padding-top: 10vw;
+  padding-top: 2vw;
   letter-spacing: .09em;
 }
 

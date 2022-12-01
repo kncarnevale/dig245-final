@@ -55,6 +55,8 @@ $(document).ready(function(){
     }
     else{
       document.getElementById('flipY').style.color = 'white';
+      document.getElementById('flipY').style.fontSize = '2.5vw';
+
       $("#panelY").slideDown("slow");
     }
   });
@@ -66,6 +68,9 @@ $(document).ready(function(){
     }
     else{
       document.getElementById('flipN').style.color = 'white';
+      document.getElementById('flipN').style.fontSize = '2.5vw';
+
+
       $("#panelN").slideDown("slow");
     }
   });
