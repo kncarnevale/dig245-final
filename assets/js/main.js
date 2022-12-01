@@ -71,13 +71,6 @@ $(document).ready(function(){
   });
 });
 
-$(document).ready(function(){
-$("#orangeButton").click(function(){
-  document.getElementById('orangeButton').style.color = 'red';
-
-});
-});
-
 
 function makeConclusionsPage(){
   var value = $("input[type=radio][name=accuracy]:checked").val();
@@ -90,12 +83,9 @@ function makeConclusionsPage(){
 
   if(value == "yes"){
     document.body.innerHTML = document.body.innerHTML.replace(currentDescription, conclusionTextYes);
-
   }else{
     document.body.innerHTML = document.body.innerHTML.replace(currentDescription, conclusionTextNo);
   }
-
-
 };
 
 //validate buttons before pressing submit

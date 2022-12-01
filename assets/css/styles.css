@@ -15,7 +15,6 @@ input[type="radio"]{
 }
 .radio-button input[type="radio"]:checked+label {
        color: #C4733B;
-       accent-color: #C4733B;
      }
 
 #panelY, #flipY {
