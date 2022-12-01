@@ -7,7 +7,7 @@ var sarabi = "You are known as a defender: reserved and protective. You are kind
 var nala = "You are a devoted friend, partner, and/or parent. You are sociable and a good leader. You also always want the best for the people you care about.";
 var pumbaa = "You are a social person that loves to spend time with their friends. You have a great sense of humor and love to spread your laugher to the world. You would prefer to do this rather than philosophizing about the world and its problems.";
 var zazu = "You are known as an executive. You live for administrative work and love managing people and things. You hold order and tradition close to your heart, which makes you a great adviser, but sometimes your opinions are a little outdated.";
-var rafiki = "You are introverted and mystical, and would prefer to be by yourself rather than hanging out with others. You also have a strong code of ethics and always advuse your close friends to do the right thing.";
+var rafiki = "You are introverted and mystical, and would prefer to be by yourself rather than hanging out with others. You also have a strong code of ethics and always advise your close friends to do the right thing.";
 var mufasa = "You are known as a commander: driven, determined, and ruthless. You were born to lead with your confidence and charisma. You find happiness in your achievements, for Mufasa this was in his legacy.";
 
 var imgArray = [];
@@ -48,15 +48,26 @@ function getResults(){
   document.getElementById("descriptID").innerHTML= currentDescription;
 };
 
-
 $(document).ready(function(){
   $("#flipY").click(function(){
-    $("#panelY").slideDown("slow");
+    if($("#panelY").is(':visible')){
+      document.getElementById('flipY').style.color = 'black';
+      $("#panelY").slideToggle("slow");
+    }else{
+      document.getElementById('flipY').style.color = 'white';
+      $("#panelY").slideToggle("slow");
+    }
   });
 });
 $(document).ready(function(){
   $("#flipN").click(function(){
-    $("#panelN").slideDown("slow");
+    if($("#panelN").is(':visible')){
+      document.getElementById('flipN').style.color = 'black';
+      $("#panelN").slideToggle("slow");
+    }else{
+      document.getElementById('flipN').style.color = 'white';
+      $("#panelN").slideToggle("slow");
+    }
   });
 });
 

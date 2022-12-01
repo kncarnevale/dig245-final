@@ -13,29 +13,66 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body  onload = "getResults()">
-<div class="container">
+<div class="container-fluid">
 <!-- visible content goes here -->
-<h1 id="header">Results Page</h1>
-<form action="">
-  <input type="button" onclick="location.href='index.html';" value="Home">
-</form>
-<img id="imgID" width="700" height="450">
-<h2 id="charID">Character</h2>
-<p id="descriptID">Description</p>
-<div id="container" style="width: 100%; height: 100%"></div>
-
-
-<div id="panelA">Is this accurate?</div>
-<div id="flipY">Yes</div>
-<div id="panelY">This personality test randomly generates a character and does not take any of your answers into account. There is a slight chance that it randomly did generate the character closest to your personality, but studies have shown that humans lean toward believing the internet when they are uncertain. This goes to show that you cannot always believe what the internet says because a good amount of the time, developers are just trying to persuade you to believe what they want you to believe, not what is actually true.
-<br>
-Be on the look out for this type of psychological game used in other websites!
+<div class="row">
+  <div class="col-2">
+  <a href="index.html">
+  <img src='assets/img/new_logo.png' width="100%" height="auto" onclick="location.href='quiz.html';">
+  </a>
+  </div>
+  <div class="col-10">
+    <a href="index.html" style="text-decoration: none">
+    <h1 class="title_otherpage">I KNOW YOU</h1>
+  </a>
+  </div>
 </div>
-<div id="flipN">No</div>
-<div id="panelN">This personality test randomly generates a character and does not take any of your answers into account. Studies have shown that humans lean toward believing the internet when they are uncertain. This goes to show that you cannot always believe what the internet says because a good amount of the time, developers are just trying to persuade you to believe what they want you to believe, not what is actually true.
-<br>
-Good eye and be on the look out for this type of psychological game used in other websites!
+<div class="row">
+  <div class="offset-8 col-4">
+    <img src='assets/img/take_again.png' width="75%" height="auto" onclick="location.href='quiz.html';">
+  </div>
 </div>
+<div class="row">
+  <div class="white offset-1 col-11">
+    <h2 style="font-size: 6vw" id="charID">Character</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="offset-2 col-8">
+<img id="imgID" width="100%" height="auto">
+  </div>
+</div>
+<div class="white row">
+  <div class="offset-2 col-8">
+    <p style="font-size: 2vw" id="descriptID">Description</p>
+  </div>
+</div>
+<div class="spacer row">
+</div>
+<div class="row white">
+  <div class="offset-1 col-10">
+  <div id="panelA">Is this accurate?</div>
+  </div>
+</div>
+<div class="row">
+  <div class="offset-1 col-5">
+    <div id="flipY">Yes</div>
+    <div class="white" id="panelY">This personality test randomly generates a character and does not take any of your answers into account. There is a slight chance that it randomly did generate the character closest to your personality, but studies have shown that humans lean toward believing the internet when they are uncertain. This goes to show that you cannot always believe what the internet says because a good amount of the time, developers are just trying to persuade you to believe what they want you to believe, not what is actually true.
+    <br>
+    Be on the look out for this type of psychological game used in other websites!
+    </div>
+  </div>
+  <div class="col-5">
+    <div id="flipN">No</div>
+    <div class="white" id="panelN">This personality test randomly generates a character and does not take any of your answers into account. Studies have shown that humans lean toward believing the internet when they are uncertain. This goes to show that you cannot always believe what the internet says because a good amount of the time, developers are just trying to persuade you to believe what they want you to believe, not what is actually true.
+    <br>
+    Good eye and be on the look out for this type of psychological game used in other websites!
+    </div>
+  </div>
+</div>
+<div class="spacer row">
+</div>
+
 
 
 <div class="output">
