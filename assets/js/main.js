@@ -50,29 +50,39 @@ function getResults(){
 
 $(document).ready(function(){
   $("#flipY").click(function(){
-    if($("#panelN").is(':visible')){
-      document.getElementById('flipY').style.color = 'black';
-    }
-    else{
+    document.getElementById('flipN').style.display ='none';
       document.getElementById('flipY').style.color = 'white';
-      document.getElementById('flipY').style.fontSize = '2.5vw';
-
-      $("#panelY").slideDown("slow");
-    }
+      document.getElementById('flipY').style.fontSize = '1vw';
+    $("#panelY").slideDown("slow");
+    // if($("#panelN").is(':visible')){
+    //   document.getElementById('flipY').style.color = 'black';
+    // }
+    // else{
+    //   document.getElementById('flipY').style.color = 'white';
+    //   document.getElementById('flipY').style.fontSize = '1vw';
+    //
+    //   $("#panelY").slideDown("slow");
+    // }
   });
 });
 $(document).ready(function(){
   $("#flipN").click(function(){
-    if($("#panelY").is(':visible')){
-      document.getElementById('flipN').style.color = 'black';
-    }
-    else{
+    document.getElementById('flipY').style.display ='none';
       document.getElementById('flipN').style.color = 'white';
-      document.getElementById('flipN').style.fontSize = '2.5vw';
-
-
-      $("#panelN").slideDown("slow");
-    }
+      document.getElementById('flipN').style.fontSize = '1vw';
+    $("#panelN").slideDown("slow");
+    // if($("#panelY").is(':visible')){
+    //   document.getElementById('flipN').style.display ='none';
+    //
+    //   //document.getElementById('flipN').style.color = 'black';
+    // }
+    // else{
+    //   document.getElementById('flipN').style.color = 'white';
+    //   document.getElementById('flipN').style.fontSize = '1vw';
+    //
+    //
+    //   $("#panelN").slideDown("slow");
+    // }
   });
 });
 

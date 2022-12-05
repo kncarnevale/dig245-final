@@ -11,8 +11,7 @@ input[type="radio"]{
   margin: 0 10px 0 10px;
 }
 .radio-button {
-    accent-color: #C4733B;
-    font-size: 3vw;
+    font-size: .8vw;
 }
 .radio-button input[type="radio"]:checked+label {
        color: #C4733B;
@@ -20,7 +19,6 @@ input[type="radio"]{
 
 #panelY, #flipY {
   padding: 5px;
-  text-align: center;
   background-color: #C4733B;
   border: solid 1px black;
 }
@@ -28,12 +26,11 @@ input[type="radio"]{
 #panelY {
   padding: 50px;
   display: none;
-  font-size: 2.5vw;
+  font-size: .8vw;
 
 }
 #panelN, #flipN {
   padding: 5px;
-  text-align: center;
   background-color: #C4733B;
   border: solid 1px black;
 
@@ -42,29 +39,39 @@ input[type="radio"]{
 #panelN {
   padding: 50px;
   display: none;
-  font-size: 2.5vw;
+  font-size: .8vw;
 }
 #panelA {
   padding: 5px;
   text-align: center;
   background-color: #C4733B;
   border: solid 1px black;
-  font-size: 2.5vw;
+  font-size: 1vw;
 }
 
 
 #flipN:hover {
+  text-align: center;
   color: white;
   text-shadow:0px 0px 30px #fdec6e;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  font-size: 2.5vw;
+  font-size: 1vw;
 
 
 }
+#flipY{
+  text-align: center;
+  font-size: .8vw;
 
+}
+#flipN{
+  text-align: center;
+  font-size: .8vw;
+
+}
 #flipY:hover {
   color: white;
   text-shadow:0px 0px 30px #fdec6e;
@@ -72,7 +79,7 @@ input[type="radio"]{
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  font-size: 2.5vw;
+  font-size: 1vw;
 
 }
 .white{ color: white}
