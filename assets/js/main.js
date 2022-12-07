@@ -52,7 +52,7 @@ $(document).ready(function(){
   $("#flipY").click(function(){
     document.getElementById('flipN').style.display ='none';
       document.getElementById('flipY').style.color = 'white';
-      document.getElementById('flipY').style.fontSize = '1.75vw';
+      document.getElementById('flipY').style.fontSize = '17px';
     $("#panelY").slideDown("slow");
   });
 });
@@ -60,7 +60,7 @@ $(document).ready(function(){
   $("#flipN").click(function(){
     document.getElementById('flipY').style.display ='none';
       document.getElementById('flipN').style.color = 'white';
-      document.getElementById('flipN').style.fontSize = '1.75vw';
+      document.getElementById('flipN').style.fontSize = '17px';
     $("#panelN").slideDown("slow");
   });
 });
