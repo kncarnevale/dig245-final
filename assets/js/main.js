@@ -52,37 +52,16 @@ $(document).ready(function(){
   $("#flipY").click(function(){
     document.getElementById('flipN').style.display ='none';
       document.getElementById('flipY').style.color = 'white';
-      document.getElementById('flipY').style.fontSize = '1vw';
+      document.getElementById('flipY').style.fontSize = '1.75vw';
     $("#panelY").slideDown("slow");
-    // if($("#panelN").is(':visible')){
-    //   document.getElementById('flipY').style.color = 'black';
-    // }
-    // else{
-    //   document.getElementById('flipY').style.color = 'white';
-    //   document.getElementById('flipY').style.fontSize = '1vw';
-    //
-    //   $("#panelY").slideDown("slow");
-    // }
   });
 });
 $(document).ready(function(){
   $("#flipN").click(function(){
     document.getElementById('flipY').style.display ='none';
       document.getElementById('flipN').style.color = 'white';
-      document.getElementById('flipN').style.fontSize = '1vw';
+      document.getElementById('flipN').style.fontSize = '1.75vw';
     $("#panelN").slideDown("slow");
-    // if($("#panelY").is(':visible')){
-    //   document.getElementById('flipN').style.display ='none';
-    //
-    //   //document.getElementById('flipN').style.color = 'black';
-    // }
-    // else{
-    //   document.getElementById('flipN').style.color = 'white';
-    //   document.getElementById('flipN').style.fontSize = '1vw';
-    //
-    //
-    //   $("#panelN").slideDown("slow");
-    // }
   });
 });
 
@@ -117,6 +96,9 @@ var q10 = $('input[name=answer10]');
 function checkRadioButtonsForQuiz() {
   if ($(q1).is(':checked') && $(q2).is(':checked') && $(q3).is(':checked')&& $(q4).is(':checked')&& $(q5).is(':checked')&& $(q6).is(':checked')&& $(q7).is(':checked')&& $(q8).is(':checked')&& $(q9).is(':checked')&& $(q10).is(':checked')) {
     document.getElementById("quizButton").onclick = location.href='results.html';
+    document.getElementById("error").innerHTML= "";
+  }else{
+    document.getElementById("error").innerHTML= "*Fill in all fields";
   }
 
 };

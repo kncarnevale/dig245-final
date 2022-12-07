@@ -11,11 +11,32 @@ input[type="radio"]{
   margin: 0 10px 0 10px;
 }
 .radio-button {
-    font-size: .8vw;
+    font-size: 1.5vw;
 }
 .radio-button input[type="radio"]:checked+label {
        color: #C4733B;
-     }
+}
+.btn-primary,  .btn-primary:active, .btn-primary:visited {
+    background-color: #C4733B !important;
+    color: white !important;
+    border-radius: 1rem !important;
+    border-color: #C4733B !important;
+
+    /* line-height: 1 !important; */
+}
+.btn-primary:hover{
+  background-color: #b36734 !important;
+
+}
+
+.btn-dark, .btn-dark:active, .btn-dark:visited {
+    border-radius: 1rem !important;
+    
+
+    /* line-height: 1 !important; */
+}
+
+
 
 #panelY, #flipY {
   padding: 5px;
@@ -26,7 +47,7 @@ input[type="radio"]{
 #panelY {
   padding: 50px;
   display: none;
-  font-size: .8vw;
+  font-size: 1.5vw;
 
 }
 #panelN, #flipN {
@@ -39,14 +60,14 @@ input[type="radio"]{
 #panelN {
   padding: 50px;
   display: none;
-  font-size: .8vw;
+  font-size: 1.5vw;
 }
 #panelA {
   padding: 5px;
   text-align: center;
   background-color: #C4733B;
   border: solid 1px black;
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 
 
@@ -58,18 +79,18 @@ input[type="radio"]{
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  font-size: 1vw;
+  font-size: 1.75vw;
 
 
 }
 #flipY{
   text-align: center;
-  font-size: .8vw;
+  font-size: 1.5vw;
 
 }
 #flipN{
   text-align: center;
-  font-size: .8vw;
+  font-size: 1.5vw;
 
 }
 #flipY:hover {
@@ -79,7 +100,7 @@ input[type="radio"]{
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  font-size: 1vw;
+  font-size: 1.75vw;
 
 }
 .white{ color: white}

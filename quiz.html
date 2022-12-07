@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+body{font-family: 'Montserrat'}
+.container{ background-color: black}
+
+
+</style>
 
   <!-- HI -->
 
@@ -205,9 +211,15 @@
 <div class="spacer row">
 </div>
 <div class="row">
-  <div class="offset-5 col-3">
-    <img src='assets/img/submit_button.png' width="75%" height="auto" onclick="checkRadioButtonsForQuiz();">
+  <div class="offset-2 col-3">
+    <button class="btn btn-primary btn-block" onclick="checkRadioButtonsForQuiz();">Submit</button>
+
   </div>
+</div>
+<div class="row">
+  <div class="offset-2 col-3">
+<p id="error" style="color: red;font-size: 1.25vw;padding-top:.5vw"></p>
+</div>
 </div>
 <div class="spacer row">
 </div>
